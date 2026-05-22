@@ -52,3 +52,21 @@ button {
 .titulo {
     margin-left: 8px;
 }
+
+/* Configurações base do botão e transição suave */
+#btn-enviar {
+    background-color: #1351d8;
+    color: #ffffff;
+    border: 0;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    /* transition faz a mudança de tamanho e cor ser suave e não um tranco */
+    transition: transform 0.3s ease, background-color 0.3s ease; 
+}
+
+/* Efeito Hover: Quando o mouse passa por cima do botão */
+#btn-enviar:hover {
+    background-color: #1b357e; /* Altera a cor para um tom mais escuro */
+    transform: scale(1.08);    /* Aumenta o tamanho dele em 8% */
+}
