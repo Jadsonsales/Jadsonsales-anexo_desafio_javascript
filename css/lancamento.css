@@ -87,7 +87,8 @@ div#compare {
 .video-main {
     width: 100%;
     max-width: 990px;
-    padding: 60px;
+    padding: 20px;
+    margin: 0 auto;
 }
 
 .video-main iframe {
@@ -100,15 +101,13 @@ div#compare {
 }
 
 .video-description {
-    font-size: 22rem;
-    gap: 16px;
     max-width: 990px;
-    margin: 30px auto;
+    margin: 10px auto; /* Reduzi a margem superior de 30px para 10px */
     text-align: justify;
     color: var(--cor-principal);
     font-size: 16px;
     line-height: 1.6;
-    padding: 0 5px;
+    padding: 0; /* Removido o padding lateral de 5px */
     display: flex;
     align-items: center;
 }
