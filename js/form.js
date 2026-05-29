@@ -32,3 +32,12 @@ function Post(event, form) {
     // Limpa os campos do formulário após o envio
     form.reset();
 }
+
+// Função para validar o consentimento do usuário antes de habilitar o botão Enviar
+function validarConsentimento() {
+    const checkboxTermos = document.getElementById('termos');
+    const btnEnviar = document.getElementById('btn-enviar');
+    
+    // Habilita o botão se o checkbox estiver marcado, caso contrário, desabilita 
+    btnEnviar.disabled = !checkboxTermos.checked;
+}
