@@ -33,11 +33,16 @@ function Post(event, form) {
     form.reset();
 }
 
-// Função para validar o consentimento do usuário antes de habilitar o botão Enviar
-function validarConsentimento() {
-    const checkboxTermos = document.getElementById('termos');
+document.addEventListener('DOMContentLoaded', function() {
+    // Ajustado para o ID correto 'aceite-termos' do seu HTML
+    const checkboxTermos = document.getElementById('aceite-termos');
     const btnEnviar = document.getElementById('btn-enviar');
-    
-    // Habilita o botão se o checkbox estiver marcado, caso contrário, desabilita 
-    btnEnviar.disabled = !checkboxTermos.checked;
-}
+
+    if (checkboxTermos && btnEnviar) {
+        btnEnviar.disabled = !checkboxTermos.checked;
+
+        checkboxTermos.addEventListener('change', function() {
+            btnEnviar.disabled = !this.checked;
+        });
+    }
+});
