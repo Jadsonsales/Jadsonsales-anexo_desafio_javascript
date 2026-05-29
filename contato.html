@@ -49,30 +49,32 @@
                     <option value="Reclamação">Reclamação</option>
                     <option value="Solicitação">Solicitação</option>
                 </select>
-
-                <textarea id="mensagem" name="mensagem" placeholder="MENSAGEM*" class="fordform" style="height: 80px; resize: none;" required></textarea>
-
-                <div class="lgpd-secao">
-                    <p class="lgpd-texto">
-                        Os dados serão mantidos em nossa base de dados, só enquanto for desejado por você. 
-                        A qualquer momento, será possível editar ou remover tais dados. 
-                        <a href="https://www.ford.com.br/politica-de-privacidade/" target="_blank">Termos e Condições.</a>
-                    </p>
-                    
-                    <div class="checkbox-container">
-                        <input type="checkbox" id="termos" name="termos" onchange="validarConsentimento()">
-                        <label for="termos">Sim. Li e concordo com os Termos. </label>
-                       
-                    </div>
-                    
-                    <div class="checkbox-container">
-                        <input type="checkbox" id="novidades" name="novidades">
-                        <label for="novidades">Sim. Também quero receber descontos e novidades.</label>
-                    </div>
+                
+                <textarea id="mensagem" name="mensagem" placeholder="MENSAGEM*" class="fordform" style="height: 80px; resize: none;"
+                    required></textarea>
+               <div class="lgpd-secao">
+            <p class="lgpd-texto">
+                Os dados serão mantidos em nossa base de dados, só enquanto for desejado por você. 
+                A qualquer momento, será possível editar ou remover tais dados. 
+                <a href="https://www.ford.com.br/politica-de-privacidade/" target="_blank">Termos e Condições</a>.
+            </p>
+        
+            <fieldset style="border: none; padding: 0;">
+                <div class="checkbox-container">
+                    <input type="checkbox" id="aceite-termos" name="termos">
+                    <label for="aceite-termos">Sim. Li e concordo com os nossos termos.</label>
                 </div>
-
-                <button type="submit" id="btn-enviar" disabled>Enviar</button> 
-            </form>
+        
+                <div class="checkbox-container">
+                    <input type="checkbox" id="marketing" name="marketing">
+                    <label for="marketing">Sim. Também quero receber descontos e novidades.</label>
+                </div>
+            </fieldset>
+        </div>
+            
+                <button type="submit" id="btn-enviar" disabled>Enviar</button>
+                
+                </form>
         </div>
     </div>
 </main>
