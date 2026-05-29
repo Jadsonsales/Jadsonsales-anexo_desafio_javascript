@@ -1,69 +1,87 @@
+.forms {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    padding: 50px 20px;
+}
+
+.container-imagem img {
+    max-width: 450px;
+    height: auto;
+}
+
+.container-formulario {
+    width: 320px; 
+}
+
+/* Campos do Formulário */
 .fordform {
     display: block;
-    width: 300px;
+    width: 100%;
+    box-sizing: border-box;
     border: 1px solid #cccccc;
-    border-radius: 10px;
-    height: 26px;
-    margin: 8px;
+    border-radius: 8px;
+    height: 36px;
+    margin: 10px 0;
     font-size: 13px;
-    padding: 5px;
+    padding: 8px;
 }
 
 select.fordform {
-    width: 310px;
-    height: 36px;
+    height: 40px;
     color: #807d7d;
 }
 
-input:focus-visible {
-    outline: none;
+textarea.fordform {
+    height: 80px;
 }
 
-select:focus-visible {
-    outline: none;
-}
-
-main div {
-    display: inline-block;
-    vertical-align: top;
+/* Estilo da Seção LGPD */
+.lgpd-secao {
+    margin: 15px 0;
     text-align: left;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    color: #999; 
+    font-size: 11px; 
+    line-height: 1.3;
 }
 
-.forms {
-    display: block;
-    text-align: center;
+.lgpd-texto {
+    margin-bottom: 10px;
 }
 
-h2 {
-    text-align: left;
-    font-weight: 800;
+.lgpd-texto a {
+    color: #1351d8;
+    text-decoration: underline;
 }
 
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 6px;
+}
 
-button {
-    width: 200px;
-    height: 40px;
+.checkbox-container input {
     margin-right: 8px;
-    float: right;
+    width: 14px;
+    height: 14px;
 }
 
-.titulo {
-    margin-left: 8px;
-}
-
+/* Botão Enviar */
 #btn-enviar {
+    width: 200px;
+    height: 45px;
     background-color: #1351d8;
     color: #ffffff;
     border: 0;
     border-radius: 10px;
     cursor: pointer;
     font-weight: bold;
-    transition: transform 0.3s ease, background-color 0.3s ease; 
+    float: right;
+    margin-top: 10px;
 }
 
-#btn-enviar:hover {
-    background-color: #1b357e; 
-    transform: scale(1.08); 
+#btn-enviar:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
 }
