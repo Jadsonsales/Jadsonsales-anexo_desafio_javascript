@@ -9,6 +9,22 @@ class Contato {
     }
 }
 
+// Função para validar o formulário e enviar os dados
+document.addEventListener('DOMContentLoaded', function() {
+    const checkboxTermos = document.getElementById('aceite-termos');
+    const btnEnviar = document.getElementById('btn-enviar');
+
+    if (checkboxTermos && btnEnviar) {
+        // Começa desabilitado se o checkbox não estiver marcado
+        btnEnviar.disabled = !checkboxTermos.checked;
+
+        // Escuta a mudança no checkbox
+        checkboxTermos.addEventListener('change', function() {
+            btnEnviar.disabled = !this.checked;
+        });
+    }
+});
+
 // Função disparada ao clicar no botão Enviar
 function Post(event, form) {
 
@@ -32,17 +48,3 @@ function Post(event, form) {
     // Limpa os campos do formulário após o envio
     form.reset();
 }
-
-document.addEventListener('DOMContentLoaded', function() {
-    // Ajustado para o ID correto 'aceite-termos' do seu HTML
-    const checkboxTermos = document.getElementById('aceite-termos');
-    const btnEnviar = document.getElementById('btn-enviar');
-
-    if (checkboxTermos && btnEnviar) {
-        btnEnviar.disabled = !checkboxTermos.checked;
-
-        checkboxTermos.addEventListener('change', function() {
-            btnEnviar.disabled = !this.checked;
-        });
-    }
-});
